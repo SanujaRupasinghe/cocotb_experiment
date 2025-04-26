@@ -1,0 +1,6 @@
+venv
+sim_build
+__pycache__
+dump.vcd
+pipeline_test_2.txt
+results.xml
