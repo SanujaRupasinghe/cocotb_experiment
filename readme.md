@@ -1,7 +1,7 @@
 # cocotb_experiment
 # Pipelined Multiply and Accumulator
 
-This is a 4-stage pipelined **Multiply-and-Add** module designed with **ready-valid handshaking** for reliable data processing.
+This 4-stage pipelined **Multiply-and-Add** module is designed with **ready-valid handshaking** for reliable data processing.
 
 ## Overview
 The module performs `result = (in_a * in_b) + in_c` in a pipelined manner over **four stages**:
@@ -20,14 +20,14 @@ The module performs `result = (in_a * in_b) + in_c` in a pipelined manner over *
 ## Results  (log_output.txt)
 ![Results](images/results.png) 
 
-the full behaviour of the pipeline is shown here 
+The full behaviour of the pipeline is shown here 
 
 ---
-## 2 tests are are done to verify the functionality
-1. log all the data in clock edges
-2. compare values expected vs calculated
+## 2 tests are done to verify the functionality
+1. Log all the data in the clock edges
+2. Compare values expected vs calculated
 
 ---
-# Note
-1. In the test bench `ready_in` is always driven high 
-2. In test1 `valid_in` is always 1 and in test2 `valid_in` is 80% of the time is 1 because test bench provide data that are valid without looking at the `ready_out`, some input signals are missed by the DUT and output is duplicated
+# Used Tools
+1. Verilator
+2. gtkwave
